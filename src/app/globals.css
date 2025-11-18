@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 30% 99%;
+  --foreground: 222 35% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 30% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 35% 10%;
+  --primary: 234 100% 67%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 152 66% 35%;
+  --secondary-foreground: 152 100% 95%;
+  --muted: 225 18% 90%;
+  --muted-foreground: 225 15% 35%;
+  --accent: 272 65% 60%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 222 18% 85%;
+  --input: 222 18% 85%;
+  --ring: 234 100% 67%;
+  --radius: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 222 35% 7%;
+    --foreground: 220 30% 95%;
+    --card: 224 35% 10%;
+    --card-foreground: 220 30% 95%;
+    --popover: 224 35% 12%;
+    --popover-foreground: 220 30% 95%;
+    --primary: 234 100% 70%;
+    --primary-foreground: 222 35% 10%;
+    --secondary: 152 60% 40%;
+    --secondary-foreground: 222 35% 10%;
+    --muted: 224 25% 18%;
+    --muted-foreground: 224 12% 70%;
+    --accent: 272 65% 70%;
+    --accent-foreground: 224 20% 10%;
+    --destructive: 0 63% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 224 25% 18%;
+    --input: 224 25% 18%;
+    --ring: 234 100% 70%;
+  }
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+.bg-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(79, 105, 255, 0.15) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+.gradient-ring {
+  position: relative;
+}
+
+.gradient-ring::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #4f69ff, #2bbb7c);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+::selection {
+  background: rgba(79, 105, 255, 0.15);
+}
+

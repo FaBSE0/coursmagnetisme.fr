@@ -1,0 +1,32 @@
+# coursmagnetisme.fr – règles Cursor
+
+## Priorités absolues
+- Lire les fichiers de la documentation dans `docs/` avant toute modification.
+- Respecter TypeScript strict, App Router Next.js et génération statique (SSG).
+- Garder les composants découplés, réutilisables et documentés.
+
+## Stack & conventions
+- Framework : Next.js 14 (App Router) avec dossier `src/`.
+- Styling : Tailwind CSS + tokens décrits dans `docs/STYLING_GUIDE.md`.
+- UI Kit : shadcn/ui (config dans `components.json`), icônes `lucide-react`.
+- Helpers : utiliser `cn()` (dans `src/lib/utils.ts`) pour concaténer les classes.
+- Données : toutes les sources se trouvent sous `src/data/`, référencer les interfaces de `docs/DATA_MODELS.md`.
+
+## Processus de développement
+1. Suivre l’ordre défini dans `docs/IMPLEMENTATION_CHECKLIST.md`.
+2. A chaque fonctionnalité :
+   - Vérifier les specs correspondantes dans `docs/COMPONENTS_SPECS.md` et `docs/PAGES_CONTENT.md`.
+   - Appliquer les exigences SEO de `docs/SEO_REQUIREMENTS.md`.
+3. Toujours ajouter des tests manuels (audit Lighthouse, responsive) avant livraison.
+
+## Commandes utiles
+- `npm run dev` : serveur de développement.
+- `npm run lint` : lint Next.js/ESLint.
+- `npm run typecheck` : validation TypeScript stricte.
+- `npm run build` : build SSG (utile pour vérif avant déploiement).
+
+## Qualité & revues
+- Commenter les décisions structurantes dans les PR.
+- Interdire l’introduction de dépendances non documentées sans mise à jour de `docs/ARCHITECTURE.md`.
+- Tout nouveau composant doit inclure un exemple d’utilisation dans `docs/COMPONENTS_SPECS.md`.
+

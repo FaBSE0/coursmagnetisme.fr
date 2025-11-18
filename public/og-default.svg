@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="48" fill="url(#grad)"/>
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1200" y2="630">
+      <stop offset="0%" stop-color="#4F69FF"/>
+      <stop offset="100%" stop-color="#24C08B"/>
+    </linearGradient>
+  </defs>
+  <text x="80" y="240" fill="white" font-size="72" font-family="Space Grotesk, Inter, sans-serif" font-weight="600">
+    coursmagnetisme.fr
+  </text>
+  <text x="80" y="330" fill="white" font-size="48" font-family="Inter, sans-serif" opacity="0.9">
+    Comparatifs & avis sur les meilleures formations
+  </text>
+  <text x="80" y="410" fill="white" font-size="32" font-family="Inter, sans-serif" opacity="0.8">
+    Guides indépendants · Témoignages vérifiés · Ressources pour lancer sa pratique
+  </text>
+</svg>
+

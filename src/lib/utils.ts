@@ -25,3 +25,8 @@ export const formatDuration = (hours: number) => {
   return `${days} j`;
 };
 
+export const formatRating = (rating: number, count: number): string => {
+  if (!rating || !count) return '';
+  return `${rating.toFixed(1)}/5 (${count} avis)`;
+};
+

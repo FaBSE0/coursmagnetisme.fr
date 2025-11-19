@@ -6,7 +6,7 @@ import { blogPosts } from '@/data/articles';
 
 const baseUrl = `https://${siteConfig.domain}`;
 
-const staticRoutes = ['/', '/formations', '/temoignages', '/faq', '/blog', '/mentions-legales', '/politique-confidentialite'];
+const staticRoutes = ['/', '/formations', '/formations/udemy', '/temoignages', '/faq', '/blog', '/mentions-legales', '/politique-confidentialite'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
